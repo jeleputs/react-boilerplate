@@ -1,6 +1,7 @@
 /* eslint consistent-return:0 import/order:0 */
 
 const express = require('express');
+const fileUpload = require('express-fileupload');
 const logger = require('./logger');
 
 const argv = require('./argv');
@@ -14,8 +15,42 @@ const ngrok =
 const { resolve } = require('path');
 const app = express();
 
+app.use(fileUpload());
+
 // If you need a backend, e.g. an API, add your custom backend-specific middleware here
 // app.use('/api', myApi);
+
+app.post('/ws/payment', (req, res) => {
+  const uploadFile = req.files.proofOfPayment;
+  const fileName = req.files.proofOfPayment.name;
+  uploadFile.mv(`${__dirname}/public/files/${fileName}`, err => {
+    if (err) {
+      return res.status(500).send(err);
+    }
+
+    // save to database
+
+    // response to FE
+    res.json({
+      proofOfPayment: `/public/files/${req.files.proofOfPayment.name}`,
+      paymentDate: req.body.paymentDate,
+      CFDIUsage: req.body.CFDIUsage,
+      accountNumber: req.body.accountNumber,
+      paid: true,
+    });
+  });
+});
+
+// WS to verify the payment stats of any given client
+app.get('/ws/paymentStatus/:id', (req, res) => {
+  res.header('Content-Type', 'application/json');
+  res.json({
+    id: req.params.id,
+    status: 'Pendiente de pago',
+    paydayLimit: '28-12-2018',
+    allowed: true,
+  });
+});
 
 // In production we need to pass these values in instead of relying on webpack
 setup(app, {
