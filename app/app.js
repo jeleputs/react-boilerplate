@@ -5,6 +5,11 @@
  * code.
  */
 
+// import material design styles
+import 'font-awesome/css/font-awesome.min.css';
+import 'bootstrap-css-only/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
+
 // Needed for redux-saga es6 generator support
 import '@babel/polyfill';
 
