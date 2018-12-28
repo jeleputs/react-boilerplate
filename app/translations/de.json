@@ -25,7 +25,12 @@
   "boilerplate.containers.HomePage.tryme.atPrefix": "",
   "boilerplate.containers.HomePage.tryme.header": "Probiere mich!",
   "boilerplate.containers.HomePage.tryme.message": "Zeige die Github Repositories von",
-  "boilerplate.containers.LocaleToggle.de": "",
-  "boilerplate.containers.LocaleToggle.en": "",
-  "boilerplate.containers.NotFoundPage.header": "Seite nicht gefunden."
+  "boilerplate.containers.LocaleToggle.de": "de",
+  "boilerplate.containers.LocaleToggle.en": "en",
+  "boilerplate.containers.LocaleToggle.es": "es",
+  "boilerplate.containers.NotFoundPage.header": "Seite nicht gefunden.",
+  "collethnicpay.containers.navbarPage.navbar.title": "Navbar",
+  "collethnicpay.containers.navbarPage.navbar.homeLink": "Inicio",
+  "collethnicpay.containers.navbarPage.navbar.featuresLink": "Eigenschaften",
+  "collethnicpay.containers.navbarPage.navbar.pricingLink": "Pricing"
 }

@@ -27,5 +27,10 @@
   "boilerplate.containers.HomePage.tryme.message": "Show Github repositories by",
   "boilerplate.containers.LocaleToggle.de": "de",
   "boilerplate.containers.LocaleToggle.en": "en",
-  "boilerplate.containers.NotFoundPage.header": "Page not found."
+  "boilerplate.containers.LocaleToggle.es": "es",
+  "boilerplate.containers.NotFoundPage.header": "Page not found.",
+  "collethnicpay.containers.navbarPage.navbar.title": "Navbar",
+  "collethnicpay.containers.navbarPage.navbar.homeLink": "Home",
+  "collethnicpay.containers.navbarPage.navbar.featuresLink": "Features",
+  "collethnicpay.containers.navbarPage.navbar.pricingLink": "Pricing"
 }
